@@ -1,0 +1,7 @@
+{
+  "name": "fun_traning",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
