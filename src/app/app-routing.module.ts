@@ -8,8 +8,21 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'adding-challenges',
     pathMatch: 'full'
+  },
+  {
+    path: 'adding-challenges',
+    children:[
+      {
+        path:"",
+        loadChildren: () => import('./adding-challenges/adding-challenges.module').then( m => m.AddingChallengesPageModule)
+      }, 
+      {
+        path:"challengeId",
+        loadChildren: ()=> import('./adding-challenges/challengeinfo/challengeinfo.module').then(m => m.ChallengeinfoPageModule)
+      }
+    ]
   },
 ];
 

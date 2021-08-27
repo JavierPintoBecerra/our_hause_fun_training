@@ -1,0 +1,119 @@
+.login-header{
+    background:#00508d;
+}
+.logo-img{
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-header::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #00508d ;
+    border-bottom: 0;
+    margin-left: -15px;
+    margin-bottom: -15px;
+}
+.mascoSelection{
+    --padding-bottom: 15px;
+    --padding-start: 5px;
+    --padding-top: 15px;
+    font-size: 15px; 
+    text-indent: 1px;
+    padding-left: 15px !important;
+    --placeholder-opacity:20%; 
+}
+.signLogin{
+    padding-top:10px;
+}
+
+[heading-column-1r]{
+    display: flex;
+    -mg-flex-align: center;
+    align-items: center;
+}
+[big-heading]{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px !important;
+    color:black; 
+}
+[small-heading]{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin-left: auto; padding-right: 40px; font-size: 15px;
+}
+ion-label{
+    color: black;
+    opacity: .8;
+    font-size: 13px;
+    display: block;
+}
+ion-content{
+    --bacground: #fafafa;
+}
+
+
+[transparent]{
+    --background:transparent;
+}
+ion-input{
+    //--color: #0000;
+    --padding-bottom: 15px;
+    --padding-start: 5px;
+    --padding-top: 15px;
+    font-size: 15px; 
+    text-indent: 1px;
+    padding-left: 15px !important;
+}
+ion-item{
+    --highlight-color-focused: transparent;
+    --highlight-height: 0;
+    --highlight-color-invalid: #000;
+    --highlight-color-valid: #ddd;
+    --min-height: 65px;
+    --padding-start:0; 
+}
+[linespace]{
+    height: 30px;
+}
+ion-button{
+    --background:#00508d;  
+}
+
+//Media
+@media(min-height:319px){
+    .center{
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        --webkit-transform: translate(-49%, -49%);
+        transform: translate(-49%, -49%);
+        width: 90%;
+    }
+}
+@media(min-height:735px){
+    .center{
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        --webkit-transform: translate(-49%, -49%);
+        transform: translate(-49%, -49%);
+        width: 90%;
+    }
+}
+@media(min-height:812px){
+    .center{
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        --webkit-transform: translate(-49%, -49%);
+        transform: translate(-49%, -49%);
+        width: 90%;
+    }
+}
+

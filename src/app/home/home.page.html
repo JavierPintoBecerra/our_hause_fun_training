@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adding-challenges"></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      OUR HOUSE FUN TRAINING
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button  expand="full" color="secondary" (click)="presentActionSheet()">Filter by mascot </ion-button>
+    <ion-list>
+     <ion-card *ngFor="let position of positions">
+     <ion-card-content>
+        <p>{{position.name}}</p>
+        <p>{{position.completed}}</p>
+     </ion-card-content>
+    </ion-card>
+    <ion-card >     
+      <ion-card-content *ngIf='sum > 0'>
+        <p>The total of challenges completed by this house is  {{sum}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-input [(ngModel)]="this.studentName" placeholder="Write here"></ion-input>
+  <ion-input [(ngModel)]="this.studentCode"placeholder="Write here"></ion-input>
+  <ion-input [(ngModel)]="this.studentGrade" placeholder="Write here"></ion-input>
+
+
+  <ion-item>
+    <ion-label>Mascot</ion-label>
+    <ion-select [(ngModel)]="this.studentHouse" value="brown" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="Falcon">Falcon</ion-select-option>
+      <ion-select-option value="Eagle">Eagle</ion-select-option>
+      <ion-select-option value="Sparrow">Sparrow</ion-select-option>
+      <ion-select-option value="Condor">Condor</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-input [(ngModel)]="this.studentPassword" placeholder="Write here"></ion-input>
+  <ion-button (click)="createChallenge()">Student information</ion-button>
+
+
 </ion-content>
