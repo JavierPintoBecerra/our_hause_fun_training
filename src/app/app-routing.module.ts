@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'adding-challenges',
+    redirectTo: 'home/login',
     pathMatch: 'full'
   },
   {

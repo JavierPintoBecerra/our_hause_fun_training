@@ -12,6 +12,8 @@
 
 <ion-content>
 
+  <p>{{this.text}}</p>
+
   <ion-list>
     <ion-item *ngFor="let challenge of challenges" 
     (click)="this.goChallengeInfo(challenge.id)">

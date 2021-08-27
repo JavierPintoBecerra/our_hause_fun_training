@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { AlertController } from '@ionic/angular';
 //import * as moment from 'moment';
 import { variable } from '@angular/compiler/src/output/output_ast';
+import { Storage } from '@capacitor/storage';
 
 @Component({
   selector: 'app-challengeinfo',
@@ -28,7 +29,6 @@ export class ChallengeinfoPage implements OnInit {
   ) {
 
     //console.log(this.location.path());
-
     this.idChallenge=this.activatedRoute.snapshot.paramMap.get('challengeId')
 
     this.challenge = this.challengesService.getChallenge(this.idChallenge); // Autogenerado
@@ -37,6 +37,8 @@ export class ChallengeinfoPage implements OnInit {
     //console.log(formattedDate);
     //console.log(this.challenge);
     //console.log(this.myDate)
+
+  
   }
 
   ngOnInit() {

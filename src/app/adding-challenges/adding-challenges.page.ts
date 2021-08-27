@@ -1,20 +1,46 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengesService } from './challenges.service';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+import { Storage } from '@capacitor/storage';
+
 @Component({
   selector: 'app-adding-challenges',
   templateUrl: './adding-challenges.page.html',
   styleUrls: ['./adding-challenges.page.scss'],
 })
 export class AddingChallengesPage implements OnInit {
+  
 
-  challenges =[]
+
+  public text:string=''
+
+  public  checkName=async()=>{
+    let {value}=await Storage.get({key:'id'})
+
+    return value;
+    
+  }
+
+  public name:string='';
+
+  challenges =[];
+
   constructor(private challengesService: ChallengesService,
-    public router: Router) { }      
+    public router: Router) {
 
-  ngOnInit() {
-    this.challenges=this.challengesService.getChallenges();  //for printing the data
+      
+    }      
+
+ async ngOnInit() {
+    
+  const name = await this.checkName()
+
+  this.text=`from ngOnInit: ${name}`;
+  console.log(`from ngOnInit: ${name}`)
+  
+  this.challenges=this.challengesService.getChallenges();  //for printing the data
     console.log(this.challenges);
+   
   }
 
   public goChallengeInfo(id: number){
