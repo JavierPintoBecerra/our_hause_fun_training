@@ -18,8 +18,21 @@ export class ChallengeinfoPage implements OnInit {
   public challenge: Challenge;
   public location: Location;
   public idChallenge: string;
-  //public myDate: Date = new Date("Sun Aug 15 2021 17:58:19 GMT-0500"); // Date  for restricting acces acordin to date
-  public challengeNumber:number = 0
+
+  
+  
+     //////++++++ Reading information from storage ++++++/////
+    /*  public  checkChallenge=async()=>{
+      let {value}=await Storage.get({key:`Challenge2`})
+  
+      return value;
+      
+    }*/
+    //////------ Reading information from storage -----/////
+ 
+
+
+
   constructor(
     private activatedRoute: ActivatedRoute,
     public challengesService: ChallengesService,
@@ -28,24 +41,28 @@ export class ChallengeinfoPage implements OnInit {
 
   ) {
 
-    //console.log(this.location.path());
+  
+
+
     this.idChallenge=this.activatedRoute.snapshot.paramMap.get('challengeId')
 
     this.challenge = this.challengesService.getChallenge(this.idChallenge); // Autogenerado
     
-    //const formattedDate = moment(this.myDate).format('DD-MM-YYYY');
-    //console.log(formattedDate);
-    //console.log(this.challenge);
-    //console.log(this.myDate)
 
   
   }
 
-  ngOnInit() {
-    //There are some differences between this and Fazt's program 
+  async ngOnInit() {
+     ////**** Using the information in the Storage *********//////
+    // const challengeUpdate = await this.checkChallenge()    // This is for showing the valued 
+
+     //console.log('This challenge state is '+challengeUpdate)  
+
+     ////----- Using the information in the Storage -------//////
+
   };
   disableButton; 
- 
+  
 
   async updateChallenge(){
     
@@ -60,10 +77,29 @@ export class ChallengeinfoPage implements OnInit {
         {
           text: 'OK', 
           handler: ()=>{
-            this.challengeNumber= this.challengeNumber+1; 
-            this.disableButton = true;
+            var  challengeNumber = parseInt(this.challenge.id) // Gets the challenge Id and converts it to an integer
+            console.log(challengeNumber)        
             console.log('Challenges Updated!!'); 
-            console.log(this.challengeNumber)
+
+            ////+++++++++ Verify challenge updated ++++++++////
+              let checkChallenge=async()=>{
+              let {value}=await Storage.get({key:`Challenge${challengeNumber}`})
+          
+              return value;
+              }
+
+            //// ------ Verify challenge updated ----- ////
+            
+            ////*******  Challenge updated *********/////
+
+            Storage.set({
+              key: `Challenge${challengeNumber}`,
+              value: ' Still Worked!!!!!'
+            });
+
+            /// ---- challenge updated ------/////
+            
+            
           }
         }
 

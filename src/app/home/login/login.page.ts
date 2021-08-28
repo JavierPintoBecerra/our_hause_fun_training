@@ -71,12 +71,24 @@ export class LoginPage implements OnInit {
       key: 'id',
       value: result['data']['id'],
     });
+    
+    //////********* Setting up the inicial condition of the challenges*******/////
+    Storage.set({
+      key: 'Challenge1',
+      value: 'false'
+    });
+    Storage.set({
+      key: 'Challenge2',
+      value: 'false'
+    });
+    //////xxxxxxxxxxxxxxxx Setting up the inicial condition of the challenges xxxxxxxxxxxxxx/////
 
     }, err => {
       console.log(err)
     })
 
-
+    
+  
   }
 
   ////*********Changing the loging / sign up information////////////

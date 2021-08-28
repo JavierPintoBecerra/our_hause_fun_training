@@ -25,24 +25,4 @@
     </ion-card>
   </ion-list>
 
-  <ion-input [(ngModel)]="this.studentName" placeholder="Write here"></ion-input>
-  <ion-input [(ngModel)]="this.studentCode"placeholder="Write here"></ion-input>
-  <ion-input [(ngModel)]="this.studentGrade" placeholder="Write here"></ion-input>
-
-
-  <ion-item>
-    <ion-label>Mascot</ion-label>
-    <ion-select [(ngModel)]="this.studentHouse" value="brown" okText="Okay" cancelText="Dismiss">
-      <ion-select-option value="Falcon">Falcon</ion-select-option>
-      <ion-select-option value="Eagle">Eagle</ion-select-option>
-      <ion-select-option value="Sparrow">Sparrow</ion-select-option>
-      <ion-select-option value="Condor">Condor</ion-select-option>
-    </ion-select>
-  </ion-item>
-
-
-  <ion-input [(ngModel)]="this.studentPassword" placeholder="Write here"></ion-input>
-  <ion-button (click)="createChallenge()">Student information</ion-button>
-
-
 </ion-content>

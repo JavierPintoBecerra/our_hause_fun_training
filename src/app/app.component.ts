@@ -27,10 +27,10 @@ export class AppComponent implements OnInit {
 
     console.log(data);
 
-    if (data !== null) {
+ /*   if (data !== null) {
       this.router.navigate(['./adding-challenges'])
     }
-
+*/   /// For making changes in the Storage I disabled this conditional 
 
   }
 

@@ -38,7 +38,7 @@ export class AddingChallengesPage implements OnInit {
   this.text=`from ngOnInit: ${name}`;
   console.log(`from ngOnInit: ${name}`)
   
-  this.challenges=this.challengesService.getChallenges();  //for printing the data
+  this.challenges=this.challengesService.getChallenges();  //for printing the data from challenges service
     console.log(this.challenges);
    
   }
