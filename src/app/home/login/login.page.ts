@@ -10,15 +10,9 @@ import { Storage } from '@capacitor/storage';  //Capacitor;
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-/*
 
-@Component({
-  selector: 'app-adding-challenges',
-  templateUrl: './adding-challenges.page.html',
-  styleUrls: ['./adding-challenges.page.scss'],
-})
 
-*/
+
 export class LoginPage implements OnInit {
 
   public studentName: string;
@@ -33,7 +27,7 @@ export class LoginPage implements OnInit {
   value: string = "" // valuye for storage
 
 
-  public  checkId=async()=>{                               //Verifies if the information is in the storage
+  public  checkId=async()=>{                         //Verifies if the information is in the storage
     let {value}=await Storage.get({key:'ty'})
 
     return value;
@@ -42,13 +36,7 @@ export class LoginPage implements OnInit {
 
 
 
-
-
-  constructor(private challengeService: ChallengesService,
-    ) {
-
- 
-
+  constructor(private challengeService: ChallengesService) {
 
   }
 

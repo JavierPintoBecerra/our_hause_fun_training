@@ -5,7 +5,7 @@ import * as moment from 'moment';
 @Injectable({
   providedIn: 'root'
 })
-export class ChallengesService {
+export class ChallengesListService {
 
   myDate=moment(new Date()).format('DD-MM-YYYY');
   

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChallengesService } from './challenges.service';
+import { ChallengesListService } from './challengesList.service';
 import {Router} from '@angular/router';
 import { Storage } from '@capacitor/storage';
 
@@ -25,7 +25,7 @@ export class AddingChallengesPage implements OnInit {
 
   challenges =[];
 
-  constructor(private challengesService: ChallengesService,
+  constructor(private ChallengesListService: ChallengesListService,
     public router: Router) {
 
       
@@ -38,7 +38,7 @@ export class AddingChallengesPage implements OnInit {
   this.text=`from ngOnInit: ${name}`;
   console.log(`from ngOnInit: ${name}`)
   
-  this.challenges=this.challengesService.getChallenges();  //for printing the data from challenges service
+  this.challenges=this.ChallengesListService.getChallenges();  //for printing the data from challenges service
     console.log(this.challenges);
    
   }
