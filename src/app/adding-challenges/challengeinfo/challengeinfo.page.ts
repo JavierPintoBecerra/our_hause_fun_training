@@ -19,15 +19,33 @@ export class ChallengeinfoPage implements OnInit {
   public location: Location;
   public idChallenge: string;
 
+
+  public challengeUpdate;   // for verifying the state of the challenge when it is loaded. 
+  public validation: string ="false"; // variable that allos to enable or desable the challenge  
+  public addChallengeCount; //Variable to convert number of challenges completed to and integer 
+  public challengeCountString; //Variable to convert number of challenges completed to string
   
   
      //////++++++ Reading information from storage ++++++/////
-    /*  public  checkChallenge=async()=>{
-      let {value}=await Storage.get({key:`Challenge2`})
+     /*When the page is load it verifies the state of the challenge */
+     public  firstChallenge=async()=>{
+      let {value}=await Storage.get({key:`Challenge${this.challenge.id}`})
   
       return value;
       
-    }*/
+    }
+
+     /// ******** Check the number of challenges completed ***** ////
+
+     public checkCompleted=async()=>{
+      let {value}=await (Storage.get({key:'ChallengeCompleted'}))
+      return value;
+      }
+
+
+
+
+    /// ----- Check the number of challenges completed ---- ////
     //////------ Reading information from storage -----/////
  
 
@@ -54,9 +72,11 @@ export class ChallengeinfoPage implements OnInit {
 
   async ngOnInit() {
      ////**** Using the information in the Storage *********//////
-    // const challengeUpdate = await this.checkChallenge()    // This is for showing the valued 
+     this.challengeUpdate = await (this.firstChallenge())   // This is for showing the valued 
+     this.addChallengeCount = parseInt(await(this.checkCompleted())) +1 
 
-     //console.log('This challenge state is '+challengeUpdate)  
+     console.log(this.addChallengeCount)
+    // console.log('This challenge state is '+this.challengeUpdate)  
 
      ////----- Using the information in the Storage -------//////
 
@@ -78,26 +98,36 @@ export class ChallengeinfoPage implements OnInit {
           text: 'OK', 
           handler: ()=>{
             var  challengeNumber = parseInt(this.challenge.id) // Gets the challenge Id and converts it to an integer
-            console.log(challengeNumber)        
+            //console.log(challengeNumber)        
             console.log('Challenges Updated!!'); 
 
             ////+++++++++ Verify challenge updated ++++++++////
-              let checkChallenge=async()=>{
+              /*let checkChallenge=async()=>{
               let {value}=await Storage.get({key:`Challenge${challengeNumber}`})
-          
               return value;
-              }
+              }*/
 
             //// ------ Verify challenge updated ----- ////
             
-            ////*******  Challenge updated *********/////
+           
+
+
+            
+            ////*******  Challenge state updated *********/////
+
+            this.challengeCountString=this.addChallengeCount + "" //Converting integer to string to be stored. 
+            console.log(this.challengeCountString)
 
             Storage.set({
               key: `Challenge${challengeNumber}`,
-              value: ' Still Worked!!!!!'
+              value: 'true'
+            });
+            Storage.set({
+              key: 'ChallengeCompleted',
+              value: this.challengeCountString
             });
 
-            /// ---- challenge updated ------/////
+            /// ---- challenge state updated ------/////
             
             
           }

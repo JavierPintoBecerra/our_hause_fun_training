@@ -19,7 +19,8 @@
     </ion-text>
   </ion-grid>
   <ng-template #disabled>
-    <ion-grid *ngIf="challenge.checked==false, else completed"> 
+    <ion-grid *ngIf="challengeUpdate == validation, else completed">  
+     
       <ion-row>
         <ion-col>
           <ion-img [src]="challenge.imageURL" class="gif_sizing, ion-no-padding"></ion-img>
