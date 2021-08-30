@@ -1,0 +1,30 @@
+ion-toolbar {
+    --background:#00508d;
+    --color: #ffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px !important;
+}
+ion-icon {
+    color: #ffffff;
+    font-size: 26px;
+}
+ion-back-button{
+    color: #ffffff;
+    font-size: 16px;
+}
+.paragrapghInfor{
+    color: black;
+    opacity: .8;
+    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-align: center;
+}
+
+.logo-img{
+    //background:#00508d;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}

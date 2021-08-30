@@ -141,10 +141,11 @@ export class ChallengeinfoPage implements OnInit {
             
             console.log('This is the ID' +this.userId)
             console.log('this is the number of challenges' + this.challengeCountString)
-            this.challengesService.update(this.userId, {completed:this.addChallengeCount}).subscribe(result=>{console.log(result)}) // not working, try sending values in string
+            this.challengesService.update(this.userId, {completed:this.addChallengeCount}).subscribe(result=>{console.log(result)}) // Sending the update to the server. 
 
-            //dinosaurios
+            //dinosaurios 29/08/21
 
+            this.router.navigate(['/adding-challenges'])
 
             // ---- Challenges updated in the server ---- ////
 

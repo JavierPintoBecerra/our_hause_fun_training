@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
   public studentHouse: string;
   public studentPassword: string;
 
-  public view;  // Variable to change from login to sign up
+  //public view;  // Variable to change from login to sign up
 
   key: string = "" // Key for storage 
   value: string = "" // valuye for storage
@@ -158,20 +158,20 @@ export class LoginPage implements OnInit {
 
   ////*********Changing the loging / sign up information////////////
 
-  public changeView() {
+  /*public changeView() {
     this.view = false;
     console.log(this.view)
   }
   public changeView2() {
     this.view = true;
     console.log(this.view)
-  }
+  }*/
   //////****xxxxxxxxx *********////////
 
 
   async ngOnInit() {
 
-    this.view = true;
+    //this.view = true;   //Changing the view from login to sign up
 
   }
 

@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar color="tertiary">
+<ion-header class="login-header">
+  <ion-toolbar>
     <ion-title>OUR HOUSE FUN TRAINING</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="goToHome()">
@@ -28,3 +28,20 @@
   </ion-list>
 
 </ion-content>
+
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <img src="assets/icon/final_logo.png" alt="" class="logo-img"  width = "46" height = "40"> 
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

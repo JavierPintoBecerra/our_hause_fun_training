@@ -1,21 +1,22 @@
 <ion-header no-border>
   <div class="login-header ion-padding">
-    <img src="assets/icon/gimandes-logo.png" alt="" class="logo-img"> 
+    <img src="assets/icon/final_logo.png" alt="" class="logo-img"> 
   </div>
 
 </ion-header>
 
 <ion-content>
-  <div class="center"*ngIf="view == true; else signin"> 
+  <!--<div class="center"*ngIf="view == true; else signin">
+
     <div heading-column-1r>
       <h1 big-heading>Login</h1>
       <h2 small-heading (click)="changeView()">SIGN UP </h2>
     </div>
     <ion-label>
       Welcome to our house fun training, the app you will use to get in shape and have fun. 
-    </ion-label>
+    </ion-label> -->
     
-    
+    <!--
     
     <ion-item transparent>
       <ion-icon name="happy-outline"></ion-icon>
@@ -31,13 +32,13 @@
     <ion-button  class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="createChallenge()">LOGIN</ion-button>
     <ion-label   class="ion-text-center signLogin"> Don't have an account? <span class="link-button" (click)="changeView()">Sign up</span>
    </ion-label>
-  </div>
-  <ng-template #signin>
+  </div> -->
+  <!--<ng-template #signin> -->
     
     <div  class="center">
       <div heading-column-1r>
-        <h1 big-heading>SIGN UP</h1>
-        <h2 small-heading (click)="changeView2()">Log in</h2>
+        <h1 big-heading>SIGN UP / LOGIN</h1>
+       <!-- <h2 small-heading (click)="changeView2()">Log in</h2> -->
       </div>
       <ion-label>
         Welcome to our house fun training, the app you will use to get in shape and have fun. 
@@ -78,8 +79,7 @@
       <ion-button  class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="createChallenge()">SIGN UP</ion-button>
     </div>
 
-  </ng-template>
+  <!--</ng-template>-->
 
-  <ion-button expand="full" (click)="setItem()">Add to storage</ion-button>
   
 </ion-content>

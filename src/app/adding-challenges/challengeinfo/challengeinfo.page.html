@@ -1,21 +1,17 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/adding-challenges"></ion-back-button>
     </ion-buttons>
     <ion-title>{{challenge.title}}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button color="success" (click)="updateChallenge()">
-        <ion-icon name="checkmark-circle-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid class="ion-no-padding" *ngIf="challenge.challengeDate && challenge.challengeDate > challenge.todaysDate; else disabled">
     <ion-text>
-      <p>This challenge is not available before {{challenge.challengeDate}}</p>
+      <p class="paragrapghInfor">This challenge is not available before {{challenge.challengeDate}}</p>
     </ion-text>
   </ion-grid>
   <ng-template #disabled>
@@ -35,7 +31,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <p class="ion-text-center">
+          <p class="paragrapghInfor">
             {{challenge.description}}
           </p>
         </ion-col>
@@ -46,9 +42,25 @@
     </ion-grid>
     <ng-template #completed>
       <ion-text>
-        <p>You already completed this challenge</p>
+        <p class="paragrapghInfor">You already completed this challenge</p>
       </ion-text>
     </ng-template>
-
   </ng-template>
 </ion-content>
+
+<!-- Footer -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <img src="assets/icon/final_logo.png" alt="" class="logo-img"  width = "46" height = "40"> 
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
