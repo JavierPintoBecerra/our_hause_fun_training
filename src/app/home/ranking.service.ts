@@ -10,7 +10,7 @@ export class RankingService {
 
   constructor(private http:HttpClient) { }
   getRanking(){
-    return this.http.get<any>("http://localhost:3000/")
-    //return this.http.get<any>("https://jsonplaceholder.typicode.com/users")
+    return this.http.get<any>("http://204.48.22.71/")  //  http://localhost:3000/ for local and for Digital Ocean http://204.48.22.71/
+    
   }
 }

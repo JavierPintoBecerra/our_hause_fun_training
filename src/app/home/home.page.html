@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/adding-challenges"></ion-back-button>
@@ -12,6 +12,7 @@
 <ion-content [fullscreen]="true">
   <ion-button  expand="full" color="secondary" (click)="presentActionSheet()">Filter by mascot </ion-button>
     <ion-list>
+      <h1 class="paragrapghInfor">The number of challenges completed by the {{this.mascotSelection}} team is {{sum}}</h1>
      <ion-card *ngFor="let position of positions">
      <ion-card-content>
         <p>{{position.name}}</p>
@@ -19,10 +20,27 @@
      </ion-card-content>
     </ion-card>
     <ion-card >     
-      <ion-card-content *ngIf='sum > 0'>
-        <p>The total of challenges completed by this house is  {{sum}}</p>
+      <ion-card-content class="results" *ngIf='sum > 0'>
+        <p class="paragrapghInfor">The total of challenges completed by the team {{this.mascotSelection}} is  {{sum}}</p>
       </ion-card-content>
     </ion-card>
   </ion-list>
 
 </ion-content>
+
+<!-- Footer -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <img src="assets/icon/final_logo.png" alt="" class="logo-img"  width = "46" height = "40"> 
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

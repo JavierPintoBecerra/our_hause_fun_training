@@ -28,6 +28,7 @@ export class HomePage implements OnInit {
 
 
 
+
   constructor(private rankingService: RankingService, public actionSheetController: ActionSheetController,private challengeService: ChallengesService,) {
 
    

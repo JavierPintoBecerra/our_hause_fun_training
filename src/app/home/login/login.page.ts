@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChallengesService } from '../../shared/services/challenges/challenges.service';
 import { Storage } from '@capacitor/storage';  //Capacitor;
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -36,7 +36,11 @@ export class LoginPage implements OnInit {
 
 
 
-  constructor(private challengeService: ChallengesService) {
+  constructor(
+    private challengeService: ChallengesService,
+    private activatedRoute: ActivatedRoute,
+    public router: Router
+    ) {
 
   }
 
@@ -152,7 +156,7 @@ export class LoginPage implements OnInit {
       console.log(err)
     })
 
-    
+    this.router.navigate(['/adding-challenges'])
   
   }
 

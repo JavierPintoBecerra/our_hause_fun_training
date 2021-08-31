@@ -9,7 +9,7 @@ export class ChallengesService {
 
 
 
-  public endPonint='http://localhost:3000/';
+  public endPonint='http://204.48.22.71/';      // Digital ocean http://204.48.22.71/   local 'http://localhost:3000/
 
   constructor(
     private http: HttpClient,
