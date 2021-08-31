@@ -9,6 +9,9 @@
 </ion-header>
 
 <ion-content>
+  <!--<video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+    <source [src]="challenge.imageURL" type="video/mp4" />
+   </video>-->
   <ion-grid class="ion-no-padding" *ngIf="challenge.challengeDate && challenge.challengeDate > challenge.todaysDate; else disabled">
     <ion-text>
       <p class="paragrapghInfor">This challenge is not available before {{challenge.challengeDate}}</p>
@@ -19,7 +22,9 @@
      
       <ion-row>
         <ion-col>
-          <ion-img [src]="challenge.imageURL" class="gif_sizing, ion-no-padding"></ion-img>
+          <!--<ion-img [src]="challenge.imageURL" class="gif_sizing, ion-no-padding"></ion-img>-->
+          <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+            <source [src]="challenge.imageURL" type="video/mp4" /></video>
         </ion-col>
       </ion-row>
       <ion-row>

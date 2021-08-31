@@ -15,15 +15,15 @@
     <ion-item *ngFor="let challenge of challenges" 
     (click)="this.goChallengeInfo(challenge.id)">
 
-      <ion-avatar slot="start">
+      <!--<ion-avatar slot="start">
         <ion-img [src]="challenge.imageURL"> </ion-img> 
-      </ion-avatar>
+      </ion-avatar>>-->
       <ion-label>
         {{challenge.title}}
       </ion-label>
-      <ion-label>
+      <!--<ion-label>
         {{challenge.challengeState}}
-      </ion-label>
+      </ion-label>-->
     </ion-item>
   </ion-list>
 
