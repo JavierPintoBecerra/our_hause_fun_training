@@ -46,21 +46,21 @@
       
       <ion-item transparent>
         <ion-icon name="person-add-outline"></ion-icon>
-        <ion-input [(ngModel)]="this.studentName" placeholder="Your name"></ion-input>
+        <ion-input [(ngModel)]="this.studentName" placeholder="Your name" required></ion-input>
       </ion-item>
       <ion-item transparent>
         <ion-icon name="bookmark-outline"></ion-icon>
-        <ion-input [(ngModel)]="this.studentCode" placeholder="Your code"></ion-input>
+        <ion-input [(ngModel)]="this.studentCode" placeholder="Your code" required></ion-input>
       </ion-item>
       <ion-item transparent>
         <ion-icon name="happy-outline"></ion-icon>
-        <ion-input [(ngModel)]="this.studentGrade" placeholder="Your grade"></ion-input>
+        <ion-input [(ngModel)]="this.studentGrade" placeholder="Your grade" required></ion-input>
       </ion-item>
       <ion-item transparent>
         <ion-icon name="bug-outline"></ion-icon>
         <ion-item>
           <ion-label class="mascoSelection">Mascot</ion-label>
-          <ion-select [(ngModel)]="this.studentHouse" value="Falcon" okText="Okay" cancelText="Dismiss">
+          <ion-select [(ngModel)]="this.studentHouse" value="Falcon" okText="Okay" cancelText="Dismiss" required>
             <ion-select-option value="Sparrow">Sparrow (PLA)</ion-select-option>
             <ion-select-option value="Hummingbird">Hummingbird (Infantyle)</ion-select-option>
             <ion-select-option value="Condor">Condor (Intermediate)</ion-select-option>
@@ -72,7 +72,7 @@
       </ion-item>
       <ion-item transparent>
         <ion-icon name="bag-outline"></ion-icon>
-        <ion-input [(ngModel)]="this.studentPassword" placeholder="Your password"></ion-input>
+        <ion-input [(ngModel)]="this.studentPassword" placeholder="Your password" required></ion-input>
       </ion-item>
   
       <div linespace></div>  
