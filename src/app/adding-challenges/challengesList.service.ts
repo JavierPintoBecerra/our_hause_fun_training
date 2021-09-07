@@ -15,7 +15,7 @@ export class ChallengesListService {
       title: 'FLAMENCO STYLE',
       imageURL:'assets/gimandes_gifs/videos/flamenco_style.mp4',   // Testing the video
       description:['Put 3 objects on the floor and on one leg we must pick them up without the leg that is in the air touching the floor.'],
-      challengeDate:'03-09-2021',
+      challengeDate:'02-09-2021',
       todaysDate:this.myDate,
       checked: true
     },

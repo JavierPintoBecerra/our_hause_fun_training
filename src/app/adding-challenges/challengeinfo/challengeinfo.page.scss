@@ -12,6 +12,26 @@ ion-back-button{
     color: #ffffff;
     font-size: 16px;
 }
+video {
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+ion-grid{
+    padding: 0%;
+   
+}
+ion-col{
+    padding: 0%;
+    
+}
+.videoCenter{
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
 .doneButton{
     --background: #358b47;  
 }

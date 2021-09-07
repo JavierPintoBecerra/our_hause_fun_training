@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "com.funtraining.app",
 	"appName": "fun_traning",
 	"webDir": "www",
 	"bundledWebRuntime": false
